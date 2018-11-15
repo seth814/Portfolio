@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+
+        <link rel="stylesheet" href="css/main.css">
+        <title>Autonomous Pi</title>
+    </head>
+
+    <body>
+        <div class="embed-project">
+            <h1 class="project-title">
+                Autonomous
+                <span class="text-secondary">Pi</span>
+            </h1>
+            <div class="embed" id="player"></div>
+            <h2 class="project-text">
+                <span class="text-secondary">Description:</span>
+                <p>Autonomous Pi is an self driving raspberry pi. It streams images (66 x 200) over wifi to my computer.
+                    Those images pass through a convolutional neural network to predict 400 different steering states.
+                    Commands are sent back to the pi so it can drive between the blue lines. Images stream at 30 frames per second.
+                </p>
+            </h2>
+        </div>
+    </body>
+
+    <script async src="https://www.youtube.com/iframe_api"></script>
+    <script>
+     function onYouTubeIframeAPIReady() {
+     var player;
+     player = new YT.Player('player', {
+        videoId: 'a3ui9-E9Szk',    // YouTube Video ID
+        width: 854,               // Player width (in px)
+        height: 480,               // Player height (in px)
+        playerVars: {
+          start: 42,          //Start time
+          end: 105,           //End time
+          autoplay: 1,        // Auto-play the video on load
+          controls: 1,        // Show pause/play buttons in player
+          showinfo: 0,        // Hide the video title
+          modestbranding: 1,  // Hide the Youtube Logo
+          loop: 1,            // Run the video in a loop
+          fs: 1,              // Hide the full screen button
+          cc_load_policy: 0,  // Hide closed captions
+          iv_load_policy: 3,  // Hide the Video Annotations
+          autohide: 0,        // Hide video controls when playing
+          rel: 0              // Hide related videos
+        },
+        events: {
+          onReady: function(e) {
+            e.target.mute();
+          }
+        }
+      });
+     }
+
+    </script>
+
+</html>

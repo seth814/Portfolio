@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+
+        <link rel="stylesheet" href="css/main.css">
+        <title>Instrument Classifier</title>
+    </head>
+
+    <body>
+        <div class="embed-project">
+            <div class="project-title">
+                Instrument
+                <span class="text-secondary">Classifier</span>
+            </div>
+            <div class="embed" id="player"></div>
+            <div class="project-text">
+                <span class="text-secondary">Description:</span>
+                <p>Instrument classifier is a gui I made in Python's tkinter.
+                    Mainly made to showcase audio modeling, it shows live audio classification being performed every tenth of a second.
+                    Data consists of audio files from 10 musical instruments. Data comes from this kaggle competition: <br></br>
+                    <a href= "https://www.kaggle.com/c/freesound-audio-tagging">https://www.kaggle.com/c/freesound-audio-tagging</a>
+                </p>
+            </div>
+        </div>
+    </body>
+
+    <script async src="https://www.youtube.com/iframe_api"></script>
+    <script>
+     function onYouTubeIframeAPIReady() {
+     var player;
+     player = new YT.Player('player', {
+        videoId: 'a8AY7i_Sp8A',    // YouTube Video ID
+        width: 854,               // Player width (in px)
+        height: 480,               // Player height (in px)
+        playerVars: {
+          autoplay: 1,        // Auto-play the video on load
+          controls: 1,        // Show pause/play buttons in player
+          showinfo: 0,        // Hide the video title
+          modestbranding: 1,  // Hide the Youtube Logo
+          loop: 1,            // Run the video in a loop
+          fs: 1,              // Hide the full screen button
+          cc_load_policy: 1,  // Hide closed captions
+          iv_load_policy: 3,  // Hide the Video Annotations
+          autohide: 0,        // Hide video controls when playing
+          rel: 0              // Hide related videos
+        },
+    });
+    };
+
+    </script>
+
+</html>
