@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+
+        <link rel="stylesheet" href="css/main.css">
+        <title>CtCI</title>
+    </head>
+
+    <body>
+        <div class="embed-project">
+            <h1 class="project-title">
+                Cracking the
+                <span class="text-secondary">Coding Interview</span>
+            </h1>
+            <div class="embed" id="player"></div>
+            <h2 class="project-text">
+                <span class="text-secondary">Description:</span>
+                <p>In an effort to get better at data structures and algorithms, I've worked through somewhere between 50 - 100 common interview problems.
+                    I want to be able to share what I learned, so I'm currently planning a YouTube
+                    series where I work through (most chapters) in cracking the coding interview in Python.
+                    I plan for the videos to start uploading early 2019, but here is a sample video from chapter 1.
+                </p>
+            </h2>
+        </div>
+    </body>
+
+    <script async src="https://www.youtube.com/iframe_api"></script>
+    <script>
+     function onYouTubeIframeAPIReady() {
+     var player;
+     player = new YT.Player('player', {
+        videoId: 'GCKf_--qWPk',    // YouTube Video ID
+        width: 854,               // Player width (in px)
+        height: 480,               // Player height (in px)
+        playerVars: {
+          autoplay: 1,        // Auto-play the video on load
+          controls: 1,        // Show pause/play buttons in player
+          showinfo: 0,        // Hide the video title
+          modestbranding: 1,  // Hide the Youtube Logo
+          loop: 1,            // Run the video in a loop
+          fs: 1,              // Hide the full screen button
+          cc_load_policy: 0,  // Hide closed captions
+          iv_load_policy: 3,  // Hide the Video Annotations
+          autohide: 0,        // Hide video controls when playing
+          rel: 0              // Hide related videos
+        },
+      });
+     }
+
+    </script>
+
+</html>

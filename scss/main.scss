@@ -194,6 +194,7 @@ main {
     grid-template-columns: repeat(2, 1fr);
 
     .project-title {
+        padding-top: 1.0rem;
         grid-area: title;
         font-size: 4.3rem;
         text-align: center;
@@ -208,7 +209,8 @@ main {
     .project-text {
         grid-area: desc;
         font-size: 2.0rem;
-        padding-right: 3.0rem;
+        text-align: justify;
+        padding-right: 5.0rem;
     }
 }
 
